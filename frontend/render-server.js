@@ -15,11 +15,15 @@ app.use(
   express.static(distDir, {
     index: false,
     etag: true,
-    maxAge: '1h',
+    maxAge: 0,
+    setHeaders: res => {
+      res.setHeader('Cache-Control', 'no-store')
+    },
   }),
 )
 
 app.get('*', (_req, res) => {
+  res.setHeader('Cache-Control', 'no-store')
   res.sendFile(path.join(distDir, 'index.html'))
 })
 
