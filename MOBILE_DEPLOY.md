@@ -3,9 +3,11 @@
 這個專案用 Render 正式部署成兩個服務：
 
 - 後端：FastAPI Web Service
-- 前端：Vite Static Site
+- 前端：Vite Static Site，若 Render Static Site 404，可使用 `taxi-dispatch-frontend-web` Node Web Service 備援
 
 iPhone 只需要開前端公開網址，例如 `https://taxi-dispatch-frontend.onrender.com`。所有 API 會透過 `VITE_API_BASE` 打到 Render 後端，不依賴本機 `127.0.0.1`、`localhost` 或同 Wi-Fi。
+
+若 `taxi-dispatch-frontend` Static Site 顯示 `Not Found`，請改開 `taxi-dispatch-frontend-web` 的 Render URL。這個服務用 Node/Express 直接 serve `dist`，不依賴 Static Site 的 Publish Directory 設定。
 
 ## 1. 後端 Render Web Service
 

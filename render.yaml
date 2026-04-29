@@ -36,3 +36,17 @@ services:
           type: web
           name: taxi-hotspot-backend
           envVarKey: RENDER_EXTERNAL_URL
+
+  - type: web
+    name: taxi-dispatch-frontend-web
+    runtime: node
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: node render-server.js
+    envVars:
+      - key: VITE_API_BASE
+        fromService:
+          type: web
+          name: taxi-hotspot-backend
+          envVarKey: RENDER_EXTERNAL_URL
