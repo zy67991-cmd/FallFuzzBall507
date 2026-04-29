@@ -37,3 +37,5 @@ AWS_SECRET_ACCESS_KEY=
 ```text
 VITE_API_BASE=https://your-backend-service.onrender.com
 ```
+
+When deploying through `render.yaml` as a Blueprint, `VITE_API_BASE` is populated automatically from the backend service `RENDER_EXTERNAL_URL`.

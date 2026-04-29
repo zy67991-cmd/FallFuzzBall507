@@ -55,6 +55,8 @@ Environment variable：
 VITE_API_BASE=https://你的後端服務.onrender.com
 ```
 
+如果使用本 repo 的 `render.yaml` Blueprint，`VITE_API_BASE` 會自動引用後端服務的 `RENDER_EXTERNAL_URL`，不需要手動回填。
+
 如果前端部署後不是在 localhost 開啟，而且沒有設定 `VITE_API_BASE`，畫面會顯示「API 尚未設定」。這是正常保護，避免手機外網誤打 `127.0.0.1`。
 
 ## 3. iPhone 展示流程
