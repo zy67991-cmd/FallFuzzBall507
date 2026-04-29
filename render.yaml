@@ -24,7 +24,7 @@ services:
     name: taxi-dispatch-frontend
     runtime: static
     rootDir: frontend
-    buildCommand: npm install && npm run build
+    buildCommand: npm install && npm run build && rm -rf ../dist && cp -R dist ../dist
     staticPublishPath: ./dist
     routes:
       - type: rewrite
