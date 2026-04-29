@@ -12,7 +12,7 @@ iPhone 只需要開前端公開網址，例如 `https://taxi-dispatch-frontend.o
 Render 設定：
 
 ```text
-Root Directory: taxi-hotspot-backend_改版/taxi-hotspot-backend_改版
+Root Directory: backend
 Build Command: pip install -r requirements.txt
 Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
 Python Runtime: python-3.11.9
@@ -44,7 +44,7 @@ https://你的後端服務.onrender.com/api/drivers
 Render 設定：
 
 ```text
-Root Directory: taxi-dispatch-frontend_改版/taxi-dispatch-frontend_改版
+Root Directory: frontend
 Build Command: npm install && npm run build
 Publish Directory: dist
 ```

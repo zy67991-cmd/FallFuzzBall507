@@ -44,7 +44,7 @@ uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ## Render Web Service
 
 ```text
-Root Directory: taxi-hotspot-backend_改版/taxi-hotspot-backend_改版
+Root Directory: backend
 Build Command: pip install -r requirements.txt
 Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
 ```

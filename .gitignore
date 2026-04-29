@@ -30,9 +30,9 @@ vite-dev*.log
 *.tar.gz
 
 # Large local simulation/model artifacts are uploaded to R2, not GitHub.
-taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/data/
-taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/model/
-taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/outputs/
-taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/rewards/
-taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/MOD/
-taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/*.parquet
+backend/data/
+backend/model/
+backend/outputs/
+backend/rewards/
+backend/MOD/
+backend/*.parquet

@@ -7,8 +7,8 @@ Push the cleaned project root with:
 - `render.yaml`
 - `MOBILE_DEPLOY.md`
 - `GITHUB_RENDER_PUSH.md`
-- `taxi-hotspot-backend_改版/taxi-hotspot-backend_改版`
-- `taxi-dispatch-frontend_改版/taxi-dispatch-frontend_改版`
+- `backend`
+- `frontend`
 
 Do not push:
 
@@ -35,15 +35,5 @@ AWS_SECRET_ACCESS_KEY=
 ## Required Render frontend env vars
 
 ```text
-VITE_API_BASE=https://你的後端服務.onrender.com
-```
-
-## Commands after an empty GitHub repo is created
-
-Replace the URL with your empty GitHub repository:
-
-```powershell
-git remote add origin https://github.com/你的帳號/taxi-smartdispatch.git
-git branch -M main
-git push -u origin main
+VITE_API_BASE=https://your-backend-service.onrender.com
 ```

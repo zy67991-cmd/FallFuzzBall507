@@ -2,7 +2,7 @@ services:
   - type: web
     name: taxi-hotspot-backend
     env: python
-    rootDir: taxi-hotspot-backend_改版/taxi-hotspot-backend_改版
+    rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
@@ -22,7 +22,7 @@ services:
   - type: web
     name: taxi-dispatch-frontend
     env: static
-    rootDir: taxi-dispatch-frontend_改版/taxi-dispatch-frontend_改版
+    rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
