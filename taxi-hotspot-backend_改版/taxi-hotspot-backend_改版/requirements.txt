@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+pyarrow
+xgboost
+boto3
+pyproj
+httpx
+folium
+sumolib
+python-dotenv

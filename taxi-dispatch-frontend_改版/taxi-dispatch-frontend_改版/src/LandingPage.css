@@ -1,0 +1,977 @@
+/* src/LandingPage.css */
+
+.landing-root {
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: #212529;
+}
+
+/* Hero */
+.hero-section {
+  background-image: url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1920&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 72px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  width: 100%;
+  position: relative;
+}
+
+.landing-hero-row {
+  min-height: calc(100vh - 72px);
+}
+
+/* Booking panel */
+.booking-panel-wrap {
+  width: 100%;
+}
+
+.panel-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.82);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.panel-toggle .arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Booking card */
+.booking-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.booking-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking-card-body {
+  display: block;
+}
+
+.booking-card-collapsible {
+  transition: all 0.3s ease;
+}
+
+.booking-card-collapsible.is-expanded .booking-card-body {
+  display: block;
+}
+
+.booking-card-collapsible.is-collapsed .booking-card-body {
+  display: none;
+}
+
+.booking-card-collapsible.is-collapsed {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* autocomplete */
+.autocomplete-dropdown {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 6px;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.autocomplete-item {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background: #f8f9fa;
+}
+
+/* Driver section */
+.driver-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+/* Steps */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-card:hover .icon-circle {
+  transform: translateY(-10px);
+}
+
+.ls-1 {
+  letter-spacing: 2px;
+}
+
+/* Heatmap */
+.heatmap-iframe {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  .landing-hero-row {
+    min-height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .heatmap-iframe {
+    height: 500px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    height: auto;
+    align-items: flex-start;
+    padding-bottom: 40px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .booking-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .booking-card-collapsible.is-collapsed {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .booking-card-header h3 {
+    font-size: 1.1rem;
+  }
+}
+
+.location-input-row {
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+.location-input-row > .form-control {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+.location-input-row > .relocate-btn {
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 86px !important;
+}
+
+/* ===== Final Uber-like landing polish ===== */
+.landing-root {
+  color: #101010;
+  background: #ffffff;
+}
+
+.hero-section {
+  min-height: calc(100vh - 44px);
+  padding-bottom: 44px;
+  background-position: center 42%;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.54);
+}
+
+.landing-hero-row {
+  min-height: calc(100vh - 116px);
+  align-items: center;
+}
+
+.booking-card {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+}
+
+.booking-card-header h3 {
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.panel-toggle,
+.relocate-btn,
+.booking-card .btn,
+.booking-card .form-control,
+.booking-card .form-select,
+.autocomplete-dropdown {
+  border-radius: 8px;
+}
+
+.panel-toggle {
+  background: #050505;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.booking-card .form-control,
+.booking-card .form-select {
+  min-height: 44px;
+  border-color: rgba(0, 0, 0, 0.16);
+  box-shadow: none;
+}
+
+.booking-card .form-control:focus,
+.booking-card .form-select:focus {
+  border-color: #050505;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.booking-card .btn-dark,
+.booking-card .btn-primary {
+  min-height: 44px;
+  background: #050505;
+  border-color: #050505;
+  font-weight: 900;
+}
+
+.booking-card .btn-outline-secondary {
+  min-height: 44px;
+  color: #050505;
+  border-color: rgba(0, 0, 0, 0.18);
+  font-weight: 800;
+}
+
+.relocate-btn {
+  border-color: rgba(0, 0, 0, 0.18);
+  background: #f5f5f5;
+  color: #101010;
+  font-weight: 900;
+}
+
+.autocomplete-dropdown {
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.16);
+}
+
+.driver-section {
+  background: #f5f5f5;
+}
+
+.heatmap-iframe {
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: calc(100vh - 32px);
+    padding-bottom: 32px;
+  }
+
+  .booking-card {
+    border-radius: 8px;
+    padding: 18px;
+  }
+}
+
+.how-it-works-section,
+.driver-section,
+.landing-root footer {
+  display: none !important;
+}
+
+.landing-root {
+  min-height: 100vh;
+  background: #000000;
+}
+
+.hero-section {
+  min-height: 100vh;
+  padding-bottom: 0;
+}
+
+.booking-card-collapsible.is-collapsed {
+  box-shadow: 0 18px 50px rgba(0,0,0,.34);
+}
+
+/* ===== Stronger Uber-style refinement ===== */
+.landing-root .navbar {
+  min-height: 68px;
+  background: #000000 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: none;
+}
+
+.landing-root .navbar .container {
+  max-width: 1180px;
+}
+
+.landing-root .navbar-brand {
+  font-size: 24px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0;
+}
+
+.landing-root .navbar-nav {
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-root .nav-link {
+  color: rgba(255, 255, 255, 0.78) !important;
+  border-radius: 8px;
+  padding: 9px 14px !important;
+  font-weight: 800;
+}
+
+.landing-root .nav-link:hover,
+.landing-root .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-section {
+  padding-top: 68px;
+}
+
+.hero-content {
+  max-width: 1180px;
+}
+
+.hero-content .display-4 {
+  max-width: 520px;
+  font-size: 56px;
+  line-height: 1.02;
+  font-weight: 900 !important;
+  letter-spacing: 0;
+  margin-bottom: 18px;
+}
+
+.hero-content .lead {
+  max-width: 430px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.booking-panel-wrap {
+  max-width: 444px;
+  margin-left: auto;
+}
+
+.panel-toggle {
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.78);
+  font-weight: 900;
+}
+
+.panel-toggle .arrow {
+  font-size: 12px;
+}
+
+.booking-card {
+  padding: 28px;
+  border: 0;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+.booking-card-header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.booking-card-header h3 {
+  font-size: 28px;
+  line-height: 1.12;
+}
+
+.booking-card-body {
+  margin-top: 18px !important;
+}
+
+.booking-card .form-label {
+  color: rgba(0, 0, 0, 0.64) !important;
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.booking-card .form-control {
+  min-height: 52px;
+  border: 0;
+  background: #eeeeee;
+  color: #050505;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 12px 14px;
+}
+
+.booking-card .form-control::placeholder {
+  color: rgba(0, 0, 0, 0.48);
+  font-weight: 700;
+}
+
+.booking-card .form-control:focus {
+  background: #f7f7f7;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #050505;
+}
+
+.booking-card .btn-dark {
+  min-height: 52px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.booking-card .btn-dark:hover {
+  background: #2a2a2a;
+  border-color: #2a2a2a;
+}
+
+.booking-card .btn-outline-dark {
+  min-height: 46px;
+  border: 0;
+  background: #eeeeee;
+  color: #111111;
+}
+
+.booking-card .btn-outline-dark:hover {
+  background: #dddddd;
+  color: #111111;
+}
+
+.booking-card .btn-link {
+  color: #111111;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.booking-card .btn-link:hover {
+  text-decoration: underline;
+}
+
+.relocate-btn {
+  min-height: 52px;
+  border: 0;
+  background: #eeeeee;
+  padding: 0 12px;
+}
+
+.relocate-btn:hover {
+  background: #dddddd;
+}
+
+.autocomplete-dropdown {
+  top: calc(100% + 8px);
+  z-index: 50;
+}
+
+.autocomplete-item {
+  min-height: 44px;
+  color: #111111;
+  font-weight: 800;
+}
+
+.map-option-item {
+  color: #050505;
+}
+
+@media (max-width: 991.98px) {
+  .booking-panel-wrap {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .hero-content .display-4 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-root .navbar {
+    min-height: 62px;
+  }
+
+  .hero-section {
+    padding-top: 62px;
+  }
+
+  .hero-content .display-4 {
+    font-size: 38px;
+  }
+
+  .hero-content .lead {
+    font-size: 17px;
+  }
+}
+
+/* ===== Uber-inspired landing refresh ===== */
+.landing-root-uber {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #050505;
+  color: #ffffff;
+}
+
+.landing-root-uber .navbar {
+  min-height: 72px;
+  background: #050505 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.landing-root-uber .navbar .container {
+  max-width: 1240px;
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+.landing-root-uber .navbar-brand {
+  font-size: 25px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.landing-root-uber .nav-link {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.82) !important;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.landing-root-uber .nav-link:hover,
+.landing-root-uber .nav-link.active {
+  color: #050505 !important;
+  background: #ffffff;
+}
+
+.landing-root-uber .hero-section {
+  min-height: 100vh;
+  padding: 72px 0 48px;
+  align-items: center;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.82) 44%, rgba(0, 0, 0, 0.36) 100%),
+    url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1920&auto=format&fit=crop");
+  background-position: center;
+  background-size: cover;
+}
+
+.landing-root-uber .hero-overlay {
+  display: none;
+}
+
+.landing-root-uber .hero-content {
+  max-width: 1240px;
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+.landing-root-uber .landing-hero-row {
+  min-height: calc(100vh - 120px);
+  justify-content: space-between;
+}
+
+.landing-root-uber .landing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  margin-bottom: 18px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.34);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.landing-root-uber .hero-content .display-4 {
+  max-width: 620px;
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-size: 62px;
+  line-height: 1.03;
+  font-weight: 900 !important;
+}
+
+.landing-root-uber .hero-content .lead {
+  max-width: 560px;
+  margin-bottom: 28px !important;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.landing-root-uber .landing-proof-row {
+  display: grid;
+  max-width: 520px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.landing-root-uber .landing-proof-item {
+  min-height: 86px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.landing-root-uber .landing-proof-item strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.landing-root-uber .landing-proof-item span {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.landing-root-uber .booking-panel-wrap {
+  max-width: 468px;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.landing-root-uber .panel-toggle {
+  display: none;
+}
+
+.landing-root-uber .booking-card {
+  width: 100%;
+  padding: 32px;
+  border: 0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #050505;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.48);
+}
+
+.landing-root-uber .booking-card-header {
+  display: block;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.landing-root-uber .booking-card-header h3 {
+  color: #050505;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.landing-root-uber .booking-card-subtitle {
+  margin: 8px 0 0;
+  color: rgba(0, 0, 0, 0.58);
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.landing-root-uber .booking-mode-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  margin-bottom: 24px;
+  padding: 4px;
+  border-radius: 8px;
+  background: #eeeeee;
+}
+
+.landing-root-uber .booking-mode {
+  min-height: 44px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.landing-root-uber .booking-mode.active {
+  background: #050505;
+  color: #ffffff;
+}
+
+.landing-root-uber .booking-mode:not(.active):hover,
+.landing-root-uber .booking-card .btn-outline-dark:hover,
+.landing-root-uber .relocate-btn:hover {
+  background: #dddddd;
+  color: #050505;
+}
+
+.landing-root-uber .booking-card-body {
+  margin-top: 24px !important;
+}
+
+.landing-root-uber .booking-card-body form > .mb-3.position-relative {
+  padding-left: 22px;
+}
+
+.landing-root-uber .booking-card-body form > .mb-3.position-relative::before {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #050505;
+}
+
+.landing-root-uber .booking-card-body form > .mb-3.position-relative:nth-of-type(2)::before {
+  border-radius: 2px;
+}
+
+.landing-root-uber .booking-card .form-label {
+  color: rgba(0, 0, 0, 0.64) !important;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.landing-root-uber .booking-card .form-control {
+  min-height: 54px;
+  border: 0;
+  border-radius: 8px;
+  background: #eeeeee;
+  color: #050505;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: none;
+}
+
+.landing-root-uber .booking-card .form-control::placeholder {
+  color: rgba(0, 0, 0, 0.46);
+  font-weight: 700;
+}
+
+.landing-root-uber .booking-card .form-control:focus {
+  background: #f7f7f7;
+  box-shadow: 0 0 0 2px #050505;
+}
+
+.landing-root-uber .relocate-btn {
+  min-width: 62px !important;
+  min-height: 54px;
+  border: 0;
+  border-radius: 8px;
+  background: #eeeeee;
+  color: #050505;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.landing-root-uber .booking-card .btn-outline-dark {
+  min-height: 48px;
+  border: 0;
+  border-radius: 8px;
+  background: #eeeeee;
+  color: #050505;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.landing-root-uber .booking-card .btn-dark {
+  min-height: 54px;
+  border: 0;
+  border-radius: 8px;
+  background: #050505;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.landing-root-uber .booking-card .btn-dark:hover {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+.landing-root-uber .booking-card .btn-link {
+  color: #050505;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.landing-root-uber .booking-card .btn-link:hover {
+  text-decoration: underline;
+}
+
+.landing-root-uber .autocomplete-dropdown {
+  top: calc(100% + 8px);
+  left: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.landing-root-uber .autocomplete-item {
+  min-height: 44px;
+  color: #111111;
+  font-weight: 800;
+}
+
+.landing-root-uber .autocomplete-item:hover {
+  background: #f1f1f1;
+}
+
+@media (min-width: 992px) {
+  .landing-root-uber .landing-hero-row {
+    flex-direction: row-reverse;
+  }
+
+  .landing-root-uber .landing-hero-row > .col-lg-6 {
+    width: 48%;
+    max-width: 48%;
+    flex: 0 0 48%;
+  }
+
+  .landing-root-uber .landing-hero-row > .col-lg-5 {
+    width: 42%;
+    max-width: 42%;
+    flex: 0 0 42%;
+  }
+
+  .landing-root-uber .landing-hero-row > .offset-lg-1 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .landing-root-uber .hero-section {
+    min-height: auto;
+    padding: 96px 0 40px;
+    align-items: flex-start;
+    background-image:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.76) 58%, rgba(0, 0, 0, 0.46) 100%),
+      url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1400&auto=format&fit=crop");
+  }
+
+  .landing-root-uber .landing-hero-row {
+    min-height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .landing-root-uber .booking-panel-wrap {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .landing-root-uber .hero-content .display-4 {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-root-uber .navbar {
+    min-height: 64px;
+  }
+
+  .landing-root-uber .navbar .container,
+  .landing-root-uber .hero-content {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .landing-root-uber .hero-section {
+    padding-top: 84px;
+    padding-bottom: 30px;
+  }
+
+  .landing-root-uber .hero-content .display-4 {
+    font-size: 36px;
+    line-height: 1.08;
+  }
+
+  .landing-root-uber .hero-content .lead {
+    font-size: 16px;
+  }
+
+  .landing-root-uber .landing-proof-row {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-root-uber .landing-proof-item {
+    min-height: 68px;
+  }
+
+  .landing-root-uber .booking-card {
+    padding: 22px;
+  }
+
+  .landing-root-uber .booking-card-header h3 {
+    font-size: 28px;
+  }
+
+  .landing-root-uber .booking-mode {
+    font-size: 14px;
+  }
+}

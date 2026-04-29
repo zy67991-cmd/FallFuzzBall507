@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: taxi-hotspot-backend
+    env: python
+    rootDir: taxi-hotspot-backend_改版/taxi-hotspot-backend_改版
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: MODEL_ENABLED
+        value: "1"
+      - key: R2_ENDPOINT
+        sync: false
+      - key: R2_BUCKET
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+
+  - type: web
+    name: taxi-dispatch-frontend
+    env: static
+    rootDir: taxi-dispatch-frontend_改版/taxi-dispatch-frontend_改版
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_BASE
+        sync: false

@@ -1,0 +1,38 @@
+# Secrets
+.env
+.env.*
+*.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node / Vite
+node_modules/
+dist/
+dist-ssr/
+
+# Logs
+*.log
+logs/
+uvicorn.*.log
+vite-dev*.log
+
+# Local editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Local archives and generated packages
+*.zip
+*.tar
+*.tar.gz
+
+# Large local simulation/model artifacts are uploaded to R2, not GitHub.
+taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/data/
+taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/model/
+taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/outputs/
+taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/rewards/
+taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/MOD/
+taxi-hotspot-backend_改版/taxi-hotspot-backend_改版/*.parquet
